@@ -1,0 +1,69 @@
+﻿<Page
+    x:Class="RandomNumberGenerator.Pages.AboutPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<UserControl.Resources>
+		<Style x:Key="BigButtonStyle" TargetType="Button">
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+			<Setter Property="Margin" Value="0"/>
+			<Setter Property="Padding" Value="0"/>
+			<Setter Property="BorderThickness" Value="2"/>
+			<Setter Property="BorderBrush" Value="#80808080"/>
+			<Setter Property="FontFamily" Value="Segoe WP Light"/>
+			<Setter Property="FontWeight" Value="SemiLight"/>
+			<Setter Property="FontSize" Value="28"/>
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="Button">
+						<Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
+							<VisualStateManager.VisualStateGroups>
+								<VisualStateGroup x:Name="CommonStates">
+									<VisualState x:Name="Normal"/>
+									<VisualState x:Name="Pressed">
+										<Storyboard>
+											<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Border">
+												<DiscreteObjectKeyFrame KeyTime="0" Value="{ThemeResource ButtonPressedBackgroundThemeBrush}"/>
+											</ObjectAnimationUsingKeyFrames>
+										</Storyboard>
+									</VisualState>
+								</VisualStateGroup>
+							</VisualStateManager.VisualStateGroups>
+							<ContentPresenter x:Name="ContentPresenter" AutomationProperties.AccessibilityView="Raw" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="TextBlockStyle" TargetType="TextBlock">
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="FontFamily" Value="Segoe WP Light"/>
+			<Setter Property="FontWeight" Value="SemiLight"/>
+			<Setter Property="FontSize" Value="28"/>
+		</Style>
+	</UserControl.Resources>
+	<Grid Margin="15">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="80"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="80"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<TextBlock Grid.Row="0" Style="{StaticResource TextBlockStyle}" FontSize="32" Text="About"></TextBlock>
+		<TextBlock Grid.Row="2" Style="{StaticResource TextBlockStyle}" TextWrapping="Wrap">
+			<Run Foreground="{ThemeResource ButtonPressedBackgroundThemeBrush}">SimplyRandom</Run>
+			<Run>is developed and maintained by Collin Dillinger.</Run>
+		</TextBlock>
+		<Button x:Name="EmailButton" Grid.Row="4" Content="email" Background="#DFCF4646" Style="{StaticResource BigButtonStyle}" Click="EmailButton_OnClick"/>
+		<Button x:Name="VisitWebiteButton" Grid.Row="6" Content="visit website" Background="#DF4646CF" Style="{StaticResource BigButtonStyle}" Click="VisitWebiteButton_OnClick"/>
+	</Grid>
+</Page>
