@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Email;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Phone.UI.Input;
@@ -51,7 +52,15 @@ namespace RandomNumberGenerator.Pages
 
 		private async void EmailButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			await Launcher.LaunchUriAsync(new Uri("mailto:collin.dillinger@gmail.com?subject=SimplyRandom"));
+			var sendTo = new EmailRecipient()
+			{
+				Name = "Collin Dillinger",
+				Address = "collin.dillinger@gmail.com"
+			};
+
+			var mail = new EmailMessage {Subject = "SimplyRandom", Body = "\n\n\nApp Version: " + App.Version};
+			mail.To.Add(sendTo);
+			await EmailManager.ShowComposeNewEmailAsync(mail);
 		}
 
 		private async void VisitWebiteButton_OnClick(object sender, RoutedEventArgs e)
