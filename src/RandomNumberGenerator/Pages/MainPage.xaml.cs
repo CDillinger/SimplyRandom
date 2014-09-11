@@ -1,12 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
-using Windows.Devices.Sensors;
-using Windows.Phone.UI.Input;
-using Windows.UI.Core;
+﻿using Windows.Phone.UI.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-using RandomNumberGenerator.Helpers;
 using RandomNumberGenerator.ViewModels;
 
 namespace RandomNumberGenerator.Pages

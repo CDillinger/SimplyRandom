@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RandomNumberGenerator.Helpers;
-using RandomNumberGenerator.Models;
 
 namespace RandomNumberGenerator.ViewModels
 {
@@ -27,20 +22,20 @@ namespace RandomNumberGenerator.ViewModels
 
 		public int MinimumValue
 		{
-			get { return AppSettings.Get<int>("MinimumValue", 0); }
+			get { return AppSettings.Get("MinimumValue", 0); }
 			set
 			{
-				AppSettings.Set<int>("MinimumValue", value);
+				AppSettings.Set("MinimumValue", value);
 				OnNotifyPropertyChanged();
 			}
 		}
 
 		public int MaximumValue
 		{
-			get { return AppSettings.Get<int>("MaximumValue", 100); }
+			get { return AppSettings.Get("MaximumValue", 100); }
 			set
 			{
-				AppSettings.Set<int>("MaximumValue", value);
+				AppSettings.Set("MaximumValue", value);
 				OnNotifyPropertyChanged();
 			}
 		}
