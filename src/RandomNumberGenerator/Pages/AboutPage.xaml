@@ -61,9 +61,9 @@
 		<TextBlock Grid.Row="0" Style="{StaticResource TextBlockStyle}" FontSize="32" Text="About"></TextBlock>
 		<TextBlock Grid.Row="2" Style="{StaticResource TextBlockStyle}" TextWrapping="Wrap">
 			<Run Foreground="{ThemeResource ButtonPressedBackgroundThemeBrush}">SimplyRandom</Run>
-			<Run>is developed and maintained by Collin Dillinger.</Run>
+			<Run>is an open source project. Click these buttons to email the developer or view the source code on GitHub.</Run>
 		</TextBlock>
 		<Button x:Name="EmailButton" Grid.Row="4" Content="email" Background="#DFCF4646" Style="{StaticResource BigButtonStyle}" Click="EmailButton_OnClick"/>
-		<Button x:Name="VisitWebiteButton" Grid.Row="6" Content="visit website" Background="#DF4646CF" Style="{StaticResource BigButtonStyle}" Click="VisitWebiteButton_OnClick"/>
+		<Button x:Name="ViewSourceCodeButton" Grid.Row="6" Content="view source code" Background="#DF4646CF" Style="{StaticResource BigButtonStyle}" Click="ViewSourceCodeButton_OnClick"/>
 	</Grid>
 </Page>

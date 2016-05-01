@@ -44,9 +44,9 @@ namespace RandomNumberGenerator.Pages
 			await EmailManager.ShowComposeNewEmailAsync(mail);
 		}
 
-		private async void VisitWebiteButton_OnClick(object sender, RoutedEventArgs e)
+		private async void ViewSourceCodeButton_OnClick(object sender, RoutedEventArgs e)
 		{
-			await Launcher.LaunchUriAsync(new Uri("http://cdillinger.me/projects/simplyrandom"));
+			await Launcher.LaunchUriAsync(new Uri("https://github.com/CDillinger/SimplyRandom"));
 		}
 	}
 }

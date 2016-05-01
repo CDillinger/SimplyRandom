@@ -18,7 +18,7 @@ namespace RandomNumberGenerator
     public sealed partial class App : Application
 	{
 		public static Frame CurrentFrame { get { return (Frame)Window.Current.Content; } }
-	    public const string Version = "1.1.0.2";
+	    public const string Version = "1.2.0.0";
 
 		private TransitionCollection _transitions;
 
