@@ -1,6 +1,6 @@
 # SimplyRandom #
 
-SimplyRandom is a very simple random number generator app for Windows Phone 8.1 (should also work with Windows 10 Mobile). The app's theme matches the color theme set by the user in the phone settings.
+SimplyRandom is a very simple random number generator app for Windows Phone 8.1 (should also work with Windows 10 Mobile). The app's theme matches the color theme set by the user in the phone settings. SimplyRandom has been published to the Windows Phone store and can be found [here](http://www.windowsphone.com/en-us/store/app/simplyrandom/f5938b99-770a-4d88-a005-254a7b3782b7).
 
 ![Dark background vs light background](http://i.imgur.com/J7Z65sK.png)
 
